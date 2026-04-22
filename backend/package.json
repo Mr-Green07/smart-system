@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
+    "server1": "node server1.js",
+    "server2": "node server2.js",
+    "load-balancer": "node load-balancer.js",
+    "start-all": "concurrently \"npm run server1\" \"npm run server2\" \"npm run load-balancer\"",
+    "dev": "nodemon load-balancer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
